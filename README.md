@@ -20,7 +20,7 @@ Note: This is a static site to be generated with [Eleventy](https://www.11ty.dev
 
 3. Accessing the site
 
-   http://localhost/gov/_site/
+   https://kenfai.github.io/gov/
 
 ## Changelog
 
