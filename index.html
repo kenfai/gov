@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Malaysia Government Social Media Channels - COVID-19</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      .icon {
+        display: inline-block;
+      }
+      a {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero is-dark is-medium is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Malaysian Government Official Social Media Channels
+          </h1>
+          <h2 class="subtitle">
+            A list of social media accounts used by the Malaysian Government and officers related to the COVID-19 pandemic.
+          </h2>
+        </div>
+      </div>
+    </section>
+    <section id="" class="section">
+      <div class="columns">
+        <div class="column">
+          <div class="panel is-primary">
+            <p class="panel-heading">
+              <span class="icon is-left">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </span>
+              Twitter
+            </p>
+            {% for account in smList.twitter %}
+            <div class="panel-block">
+              <article class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                    <img class="is-rounded" src="{{ account.avatar }}">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>{{ account.name }}</strong>
+                      <br>
+                      <a href="{{ account.url }}" target="_blank">{{ account.username }}</a>
+                      <br>
+                      <small>{{ account.description }}</small>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="column">
+          <div class="panel is-link">
+            <p class="panel-heading">
+              <span class="icon is-left">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+              </span>
+              Facebook
+            </p>
+            {% for account in smList.facebook %}
+            <div class="panel-block">
+              <article class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                    <img class="is-rounded" src="{{ account.avatar }}">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>{{ account.name }}</strong>
+                      <br>
+                      <a href="{{ account.url }}" target="_blank">{{ account.username }}</a>
+                      <br>
+                      <small>{{ account.description }}</small>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="column">
+          <div class="panel is-info">
+            <p class="panel-heading">
+              <span class="icon is-left">
+                <i class="fab fa-telegram" aria-hidden="true"></i>
+              </span>
+              Telegram
+            </p>
+            {% for account in smList.telegram %}
+            <div class="panel-block">
+              <article class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                    <img class="is-rounded" src="{{ account.avatar }}">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>{{ account.name }}</strong>
+                      <br>
+                      <a href="{{ account.url }}" target="_blank">{{ account.username }}</a>
+                      <br>
+                      <small>{{ account.description }}</small>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="panel is-danger">
+            <p class="panel-heading">
+              <span class="icon is-left">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </span>
+              Instagram
+            </p>
+            {% for account in smList.instagram %}
+            <div class="panel-block">
+              <article class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                    <img class="is-rounded" src="{{ account.avatar }}">
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>{{ account.name }}</strong>
+                      <br>
+                      <a href="{{ account.url }}" target="_blank">{{ account.username }}</a>
+                      <br>
+                      <small>{{ account.description }}</small>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="column">
+          <div class="panel is-success">
+            <p class="panel-heading">
+              <span class="icon is-left">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              </span>
+              WhatsApp
+            </p>
+            {% for account in smList.whatsapp %}
+            <div class="panel-block">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>{{ account.name }}</strong>
+                      <br>
+                      <a href="{{ account.url }}" target="_blank">{{ account.username }}</a>
+                      <br>
+                      <small>{{ account.description }}</small>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="column">
+          <div class="panel is-warning">
+            <p class="panel-heading">
+              <span class="icon is-left">
+                <i class="fas fa-globe" aria-hidden="true"></i>
+              </span>
+              Website
+            </p>
+            {% for account in smList.website %}
+            <div class="panel-block">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>{{ account.name }}</strong>
+                      <br>
+                      <a href="{{ account.url }}" target="_blank">{{ account.username }}</a>
+                      <br>
+                      <small>{{ account.description }}</small>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="box">
+        <div class="content">
+          <h1 class="title">About</h1>
+          <p>Many different government agencies & entities are using various social media channels to publish different but related information on the COVID-19 pandemic.</p>
+          <p>However, there’s a lack of coordination between them in disseminating these important information to the media and public.</p>
+          <p>This growing list was created as the first step towards discovering a more viable and effective method to keep the public informed on such on-going crisis, while ensuring speed, correctness, and completeness.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Curated by
+          <span class="icon is-small has-text-info">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+          </span><a href="https://twitter.com/ngkenfai" target="_blank">@ngkenfai</a>
+          <br>
+          <small>Mistakes? Missing link? Feedbacks? @/DM me on twitter.</small>
+        </p>
+      </div>
+    </footer>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-161468459-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
